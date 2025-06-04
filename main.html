@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Case-Insensitive Substring Index</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
+  <div class="container">
+    <h1>Find Substring Index (Ignore Case)</h1>
+
+    <label for="mainStr">Main String:</label>
+    <input type="text" id="mainStr" placeholder="e.g. Hello World" />
+
+    <label for="subStr">Substring to Find:</label>
+    <input type="text" id="subStr" placeholder="e.g. world" />
+
+    <button onclick="handleIndexSearch()">Find Index</button>
+
+    <div id="output">Result will appear here...</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

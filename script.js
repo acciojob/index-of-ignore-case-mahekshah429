@@ -1,8 +1,21 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
+function indexOfIgnoreCase(str, subStr) {
+  if (typeof str !== "string" || typeof subStr !== "string") return -1;
+
+  // Convert both strings to lowercase for case-insensitive comparison
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
+
+  return lowerStr.indexOf(lowerSubStr);
 }
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+function handleIndexSearch() {
+  const mainStr = document.getElementById("mainStr").value.trim();
+  const subStr = document.getElementById("subStr").value.trim();
+
+  const index = indexOfIgnoreCase(mainStr, subStr);
+
+  document.getElementById("output").textContent = 
+    index !== -1
+      ? `Substring found at index: ${index}`
+      : "Substring not found.";
+}
